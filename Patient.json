@@ -1,35 +1,117 @@
 {
-  "resourceType" : "Patient",
-  "identifier" : [{ Identifier }],
-  "active" : <boolean>,
-  "name" : [{ HumanName }],
-  "telecom" : [{ ContactPoint }],
-  "gender" : "<code>",
-  "birthDate" : "<date>",
-  "deceasedBoolean" : <boolean>,
-  "deceasedDateTime" : "<dateTime>",
-  "address" : [{ Address }],
-  "maritalStatus" : { CodeableConcept },
-  "multipleBirthBoolean" : <boolean>,
-  "multipleBirthInteger" : <integer>,
-  "photo" : [{ Attachment }],
-  "contact" : [{
-    "relationship" : [{ CodeableConcept }],
-    "name" : { HumanName },
-    "telecom" : [{ ContactPoint }],
-    "address" : { Address },
-    "gender" : "<code>",
-    "organization" : { Reference(Organization) },
-    "period" : { Period }
-  }],
-  "communication" : [{
-    "language" : { CodeableConcept },
-    "preferred" : <boolean>
-  }],
-  "generalPractitioner" : [{ Reference(Organization|Practitioner|PractitionerRole) }],
-  "managingOrganization" : { Reference(Organization) },
-  "link" : [{
-    "other" : { Reference(Patient|RelatedPerson) },
-    "type" : "<code>"
-  }]
+    "resourceType": "Patient",
+    "identifier": [
+        {
+            "use": "usual",
+            "system": "Dr-Ingo-SulinID",
+            "value": "123456789"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "text": "Hans Müller",
+            "family": "Müller",
+            "given": [
+                "Hans"
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "email",
+            "value": "hans-mueller@mail.de"
+        },
+        {
+            "system": "phone",
+            "value": "+492302588451",
+            "use": "home"
+        }
+    ],
+    "gender": "male",
+    "birthDate": "1960-05-06",
+    "deceasedBoolean": false,
+    "address": [
+        {
+            "use": "home",
+            "type": "physical",
+            "text": "Ruhrstraße 42, 58453 Witten",
+            "line": [
+                "Ruhrstraße 42"
+            ],
+            "city": "Witten",
+            "postalCode": "58453"
+        }
+    ],
+    "maritalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                "code": "M",
+                "display": "Married"
+            }
+        ],
+        "text": "Verheiratet"
+    },
+    "multipleBirthBoolean": false,
+    "contact": [
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                            "code": "EP",
+                            "display": "Emergency contact person"
+                        }
+                    ],
+                    "text": "Kontaktperson für Notfälle"
+                }
+            ],
+            "name": {
+                "text": "Jasmin Müller",
+                "family": "Müller",
+                "given": [
+                    "Jasmin"
+                ]
+            },
+            "telecom": [
+                {
+                    "system": "phone",
+                    "value": "+49356556565",
+                    "use": "home"
+                }
+            ],
+            "address": {
+                "use": "home",
+                "type": "physical",
+                "text": "Ruhrstraße 42, 58453 Witten",
+                "line": [
+                    "Ruhrstraße 42"
+                ],
+                "city": "Witten",
+                "postalCode": "58453"
+            },
+            "gender": "female"
+        }
+    ],
+    "communication": [
+        {
+            "language": {
+                "coding": [
+                    {
+                        "system": "urn:ietf:bcp:47",
+                        "code": "de",
+                        "display": "German"
+                    }
+                ],
+                "text": "Deutsch"
+            },
+            "preferred": true
+        }
+    ],
+    "generalPractitioner": [
+        { Reference(Organization|Practitioner|PractitionerRole)
+        }
+    ]
 }
