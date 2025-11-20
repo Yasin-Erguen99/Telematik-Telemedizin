@@ -109,9 +109,9 @@
             },
             "preferred": true
         }
-    ],
+    ]
+},
     "generalPractitioner": [
         { Reference(Organization|Practitioner|PractitionerRole)
         }
     ]
-}
