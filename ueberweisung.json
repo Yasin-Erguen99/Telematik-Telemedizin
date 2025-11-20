@@ -23,6 +23,16 @@
     }
   ],
   "priority": "urgent",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "426311001",
+        "display": "X-ray of right foot (procedure)"
+      }
+    ],
+    "text": "Röntgen Fuß rechts (V.a. Charcot)"
+  },
   "subject": {
     "reference": "Patient/53074052",
     "type": "Patient",
@@ -52,7 +62,7 @@
     {
       "reference": "Organization/53075660",
       "type": "Organization",
-      "display": "Dr. med. "
+      "display": "Dr. med. izin"
     }
   ],
   "bodySite": [
@@ -61,7 +71,7 @@
         {
           "system": "http://snomed.info/sct",
           "code": "56459004",
-          "display": "<Foot structure"
+          "display": "Foot structure"
         }
       ],
       "text": "Rechter Fuß"
