@@ -1,0 +1,75 @@
+{
+  "resourceType": "Practitioner",
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "Dr. Ingo Sulin",
+      "value": "32786",
+      "assigner": "Arzt-Vergabe"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "usual",
+      "text": "<Ingo Sulin>",
+      "family": "Sulin",
+      "given": ["Ingo"],
+      "prefix": ["Dr.med"]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "934234893",
+      "use": "work",
+      "rank": "1"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1967-12-09",
+  "address": [
+    {
+      "use": "work",
+      "type": "postal",
+      "text": "Westenhellweg 42, 44137 Dortmund",
+      "line": ["Westenhellweg 42"],
+      "city": "Dortmund",
+      "postalCode": "44137",
+      "country": "DE"
+    }
+  ],
+  "qualification": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "62247001",
+            "display": "General practitioner"
+          }
+        ],
+        "text": "Facharzt für Allgemeinmedizin (Diabetologie)"
+      },
+      "period": {
+        "start": "1990-01-01",
+        "end": "2035-01-01"
+      }
+    }
+  ],
+  "communication": [
+    {
+      "language": {
+        "coding": [
+          {
+            "system": "urn:ietf:bcp:47",
+            "code": "de",
+            "display": "German"
+          }
+        ],
+        "text": "Deutsch"
+      },
+      "preferred": true
+    }
+  ]
+}

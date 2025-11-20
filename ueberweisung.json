@@ -1,0 +1,70 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "Dr. Ingo Sulin",
+      "value": "12345",
+      "assigner": "Id-Vergabe"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "103696004",
+          "display": "Patient referral to specialist"
+        }
+      ],
+      "text": "Überweisung zum Facharzt"
+    }
+  ],
+  "priority": "urgent",
+  "subject": {
+    "reference": "Patient/53074052",
+    "type": "Patient",
+    "display": "Hans Müller"
+  },
+  "occurrencePeriod": {
+    "start": "2025-11-20",
+    "end": "2026-01-01"
+  },
+  "authoredOn": "2025-11-25",
+  "requester": {
+    "reference": "Practitioner/53076998",
+    "type": "Practitioner",
+    "display": "Dr. Ingo Sulin"
+  },
+  "performerType": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "363215001",
+        "display": "Orthopaedic surgery service"
+      }
+    ],
+    "text": "Orthopädie"
+  },
+  "performer": [
+    {
+      "reference": "Organization/53075660",
+      "type": "Organization",
+      "display": "Dr. med. "
+    }
+  ],
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "56459004",
+          "display": "<Foot structure"
+        }
+      ],
+      "text": "Rechter Fuß"
+    }
+  ]
+}
